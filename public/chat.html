@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat App</title>
     <link rel="icon" href="/img/favicon.png">
-    <link rel="stylesheet" href="/css/styles.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
     <div class="chat">
@@ -29,7 +29,7 @@
     </div>
 
     <script id="message-template" type="text/html">
-        <div class="message">
+        <div class="message {{ cls }}">
             <p>
                 <span class="message__name">{{ username }}</span>
                 <span class="message__meta">{{ createdAt }}</span>
@@ -39,7 +39,7 @@
     </script>
 
     <script id="location-template" type="text/html">
-        <div class="message">
+        <div class="message {{ cls }}">
             <p>
                 <span class="message__name">{{ username }}</span>
                 <span class="message__meta">{{ createdAt }}</span>

@@ -40,7 +40,14 @@ const autoscroll = () => {
 
 socket.on('message', (message) => {
     console.log(message)
+    let cls
+    if (message.id === socket.id) {
+        cls = 'outgoing left-side'
+    } else {
+        cls = 'incoming'
+    }
     const html = Mustache.render(messageTemplate, {
+        cls,
         username: message.username,
         message: message.text,
         createdAt: moment(message.createdAt).format('h:mm a')
@@ -51,7 +58,14 @@ socket.on('message', (message) => {
 
 socket.on('locationMessage', (url) => {
     console.log(url)
+    let cls
+    if (url.id === socket.id) {
+        cls = 'outgoing left-side'
+    } else {
+        cls = 'incoming'
+    }
     const html = Mustache.render(locationTemplate, {
+        cls,
         username: url.username,
         url: url.url,
         createdAt: moment(url.createdAt).format('h:mm a')
