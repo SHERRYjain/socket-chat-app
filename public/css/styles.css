@@ -33,6 +33,11 @@ label {
     color: #777;
 }
 
+li {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
 input {
     /* border: 1px solid #eeeeee;
     padding: 12px;
@@ -49,7 +54,7 @@ input {
 button {
     cursor: pointer;
     padding: 12px;
-    background: #7C5CBF;
+    background: #a047b8;
     border: none;
     color: white;
     font-size: 16px;
@@ -146,8 +151,8 @@ button:disabled {
 }
 
 a {
-    color: #84b3da;
-    text-decoration: none;
+    color: #4800ff;
+    text-decoration: wavy;
 }
 
 /* Message Composition Styles */
@@ -180,8 +185,8 @@ a {
 /* Chat Sidebar Styles */
 
 .room-title {
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 600;
+    font-size: 35px;
     background: #2c2f3a;
     padding: 24px;   
 }
@@ -196,10 +201,10 @@ a {
 .users {
     list-style-type: none;
     font-weight: 300;
-    padding: 12px 24px 0 24px;
+    padding: 6px 24px 0 24px;
 }
 
-.message-incoming {
+.admin , .message-incoming {
     padding: 20px; 
     border-radius: 0px 15px 15px 15px; 
     margin-bottom: 10px;
@@ -217,9 +222,13 @@ a {
     overflow-wrap: break-word;
 }
 
+.admin {
+    background: #a047b8;
+    color: #fff;  
+}
 
 .incoming {
-    background: #8F8BE8;
+    background: #47b859;
     color: #fff;  
 }
 .outgoing {

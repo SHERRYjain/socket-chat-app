@@ -43,6 +43,8 @@ socket.on('message', (message) => {
     let cls
     if (message.id === socket.id) {
         cls = 'outgoing left-side'
+    } else if(message.id === 'admin') {
+        cls = 'admin'
     } else {
         cls = 'incoming'
     }
