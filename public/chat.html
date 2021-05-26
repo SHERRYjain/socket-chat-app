@@ -29,20 +29,20 @@
     </div>
 
     <script id="message-template" type="text/html">
-        <div class="message {{ cls }}">
+        <div class="message-{{ cls }} {{ cls }}">
             <p>
                 <span class="message__name">{{ username }}</span>
-                <span class="message__meta">{{ createdAt }}</span>
+                <span class="message__name">{{ createdAt }}</span>
             </p>
             <p>{{ message }}</p>
         </div>
     </script>
 
     <script id="location-template" type="text/html">
-        <div class="message {{ cls }}">
+        <div class="message-{{ cls }} {{ cls }}">
             <p>
                 <span class="message__name">{{ username }}</span>
-                <span class="message__meta">{{ createdAt }}</span>
+                <span class="message__name">{{ createdAt }}</span>
             </p>
             <p><a href="{{ url }}" target="_blank">My current Location</a></p>
         </div>
@@ -52,7 +52,6 @@
         <div>
             <h2 class="room-title">{{ room }}</h2>
             
-            <h3 class="list-title">Users</h3>
             <ul class="users">
                 {{#users}}
                     <li>{{ username }}</li>
